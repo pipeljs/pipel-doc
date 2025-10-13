@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "pipel"
+  name: "pipeljs"
   text: "类promise的流"
   tagline: 简单易用，1分钟上手！
   image:

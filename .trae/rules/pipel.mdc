@@ -113,7 +113,7 @@ docs/
 ### 场景 1：基础用法
 
 ```typescript
-import { $ } from "pipel";
+import { $ } from "pipeljs";
 // 完整的代码示例
 ```
 
@@ -163,7 +163,7 @@ type operatorName = (...args: (Stream | Subjection)[]) => Stream;
 ## 示例
 
 ```typescript
-import { $, operatorName } from "pipel";
+import { $, operatorName } from "pipeljs";
 // 完整示例
 ```
 
@@ -202,7 +202,7 @@ import { $, operatorName } from "pipel";
 
 ```typescript
 // ✅ 好的示例：完整且可执行（基于实际 pipel API）
-import { $ } from "pipel";
+import { $ } from "pipeljs";
 
 const stream$ = $("hello")
   .then((value) => value.toUpperCase())
