@@ -5,7 +5,7 @@ Plugin is a mechanism for extending the functionality of streams. It allows you 
 ## Basic Usage
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const stream = $([1, 2, 3]).plugin(customPlugin).subscribe(console.log)
 ```

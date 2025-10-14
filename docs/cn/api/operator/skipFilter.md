@@ -30,7 +30,7 @@ type skipFilter = (filter: (time: number) => boolean) => (observable$: Observabl
 ### 场景 1：跳过奇数次推送
 
 ```typescript
-import { $, skipFilter } from 'pipel'
+import { $, skipFilter } from 'pipeljs'
 
 const stream$ = $()
 
@@ -51,7 +51,7 @@ stream$.next('fourth') // 第4次，输出: 过滤后接收的值: fourth
 ### 场景 2：跳过前 N 次推送
 
 ```typescript
-import { $, skipFilter } from 'pipel'
+import { $, skipFilter } from 'pipeljs'
 
 const stream$ = $()
 
@@ -72,7 +72,7 @@ stream$.next('fifth') // 第5次，输出: 跳过前3次后: fifth
 ### 场景 3：每 N 次推送一次
 
 ```typescript
-import { $, skipFilter } from 'pipel'
+import { $, skipFilter } from 'pipeljs'
 
 const stream$ = $()
 

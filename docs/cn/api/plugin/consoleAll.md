@@ -44,8 +44,8 @@ consoleAll: (resolvePrefix?: string, rejectPrefix?: string, ignoreUndefined?: bo
 ### 场景 1：基础调试输出
 
 ```typescript
-import { $ } from 'pipel'
-import { consoleAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { consoleAll } from 'pipeljs'
 
 const stream$ = $().use(consoleAll())
 
@@ -60,8 +60,8 @@ stream$.next(promise)
 ### 场景 2：流链调试输出
 
 ```typescript
-import { $ } from 'pipel'
-import { consoleAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { consoleAll } from 'pipeljs'
 
 const promise$ = $().use(consoleAll())
 
@@ -77,8 +77,8 @@ promise$.next(1)
 ### 场景 3：自定义前缀调试输出
 
 ```typescript
-import { $ } from 'pipel'
-import { consoleAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { consoleAll } from 'pipeljs'
 
 // 自定义前缀
 const promise$ = $().use(consoleAll('成功', '失败'))
@@ -98,8 +98,8 @@ promise$.next(rejectedPromise)
 ### 场景 4：与操作符结合调试输出
 
 ```typescript
-import { $ } from 'pipel'
-import { consoleAll, debounce } from 'pipel'
+import { $ } from 'pipeljs'
+import { consoleAll, debounce } from 'pipeljs'
 
 const promise$ = $()
   .use(consoleAll())
@@ -123,8 +123,8 @@ promise$.next(5)
 ### 场景 5：`undefined` 值处理
 
 ```typescript
-import { $ } from 'pipel'
-import { consoleAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { consoleAll } from 'pipeljs'
 
 // 默认忽略 undefined 值
 const stream1$ = $().use(consoleAll())
@@ -142,8 +142,8 @@ stream2$.next(undefined) // 输出: resolve undefined
 ### 场景 6：边界情况处理
 
 ```typescript
-import { $ } from 'pipel'
-import { consoleAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { consoleAll } from 'pipeljs'
 
 const stream$ = $().use(consoleAll())
 
@@ -165,8 +165,8 @@ stream$.next(rejectUndefined) // 不输出（undefined 被忽略）
 ### 场景 7：移除插件
 
 ```typescript
-import { $ } from 'pipel'
-import { consoleAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { consoleAll } from 'pipeljs'
 
 const plugin = consoleAll()
 const stream$ = $().use(plugin)

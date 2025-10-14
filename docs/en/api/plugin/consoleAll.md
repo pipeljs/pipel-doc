@@ -5,7 +5,7 @@ consoleAll 是一个将流中所有值输出到控制台的插件。
 ## 用法
 
 ```typescript
-import { $, consoleAll } from 'pipel'
+import { $, consoleAll } from 'pipeljs'
 
 $([1, 2, 3]).plugin(consoleAll).subscribe()
 ```
@@ -31,7 +31,7 @@ $([1, 2, 3]).plugin(consoleAll).subscribe()
 ### 基本用法
 
 ```typescript
-import { $, consoleAll } from 'pipel'
+import { $, consoleAll } from 'pipeljs'
 
 // 输出数组中的所有元素
 $([1, 2, 3, 4, 5]).plugin(consoleAll).subscribe()
@@ -41,7 +41,7 @@ $([1, 2, 3, 4, 5]).plugin(consoleAll).subscribe()
 ### 与其他操作符结合
 
 ```typescript
-import { $, consoleAll } from 'pipel'
+import { $, consoleAll } from 'pipeljs'
 
 $([1, 2, 3, 4, 5])
   .map((x) => x * 2)
@@ -54,7 +54,7 @@ $([1, 2, 3, 4, 5])
 ### 调试流程
 
 ```typescript
-import { $, consoleAll } from 'pipel'
+import { $, consoleAll } from 'pipeljs'
 
 $([1, 2, 3])
   .plugin(consoleAll) // 查看原始值

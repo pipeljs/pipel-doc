@@ -9,7 +9,7 @@ pipel 是一个类 promise 的流式编程库，擅长响应式编程。假如�
 pipel 加强了 promise，让 promise 可以不断的发布！如果你熟悉 Promise，那么你已经掌握了 pipel 的基础。
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $()
 
@@ -31,7 +31,7 @@ console.log('end')
 ```
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $(0)
 const observable$ = promise$.thenImmediate(v => v + 1)

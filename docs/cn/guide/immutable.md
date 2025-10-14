@@ -7,7 +7,7 @@ pipel 支持不可变数据，底层采用[limu](https://tnfe.github.io/limu/)�
 Stream 流的[set](/cn/api/stream.html#set)方法可以 immutable 的修改节点的数据。
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $({ a: 1, b: { c: 2 } })
 const oldValue = promise$.value
 
@@ -23,7 +23,7 @@ console.log(oldValue.b === newValue.b) // true
 Observable 流可以通过 [set](/cn/api/operator/set) 操作符修改流经当前节点的数据。
 
 ```typescript
-import { $, set } from 'pipel'
+import { $, set } from 'pipeljs'
 const promise$ = $({ a: 1, b: { c: 2 } })
 const observer1$ = promise$.pipe(set((state) => (state.a = 3)))
 const observer2$ = observer1$.pipe(set((state) => (state.a = 4)))

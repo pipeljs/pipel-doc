@@ -20,7 +20,7 @@ pnpm add pipel
 #### 创建空流
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 创建一个空流
 const stream$ = $()
@@ -55,7 +55,7 @@ stream$.next('新数据') // 输出：接收到数据: 新数据
 和 Promise 一样，pipel 支持链式操作：
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const stream$ = $()
 
@@ -110,7 +110,7 @@ console.log(oldValue?.key1 === stream$.value?.key1) // true - 未修改的对象
 ### 第四步： 部分订阅
 
 ```typescript
-import { $, change } from 'pipel'
+import { $, change } from 'pipeljs'
 
 const stream$ = $({ key1: { key11: 'test' }, key2: { key22: 'test' } })
 
@@ -130,7 +130,7 @@ stream$.set((state) => {
 ### 第五步：条件订阅
 
 ```typescript
-import { $, filter } from 'pipel'
+import { $, filter } from 'pipeljs'
 const stream$ = $()
 
 // 只处理偶数
@@ -149,7 +149,7 @@ stream$.next(4) // 输出: 偶数: 4
 #### 合并多个流的最新值
 
 ```typescript
-import { $, combine } from 'pipel'
+import { $, combine } from 'pipeljs'
 
 const name$ = $('john')
 const age$ = $(25)
@@ -171,7 +171,7 @@ age$.next(31) // 输出: 用户: lucy, 年龄: 31
 #### 等待所有流完成
 
 ```typescript
-import { $, finish } from 'pipel'
+import { $, finish } from 'pipeljs'
 
 const task1$ = $()
 const task2$ = $()
@@ -196,7 +196,7 @@ task3$.next('任务3完成', true)
 #### 用户输入防抖
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const searchInput$ = $()
 
@@ -217,7 +217,7 @@ searchInput$.next('pipel')
 #### 对象状态管理
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 应用状态
 const appState$ = $({

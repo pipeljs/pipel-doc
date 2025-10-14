@@ -29,7 +29,7 @@ type finish = <T extends (Stream | Observable)[]>(...args$: T) => Stream<StreamT
 ## 示例
 
 ```typescript
-import { $, finish } from 'pipel'
+import { $, finish } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')

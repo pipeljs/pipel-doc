@@ -7,7 +7,7 @@ pipel implements a promise-like experience from the ground up, but while promise
 pipel streams are synchronous, while promise is asynchronous.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $()
 
 promise$.then((value) => {
@@ -41,7 +41,7 @@ console.log('start')
 Only when pipel pushes asynchronous data does the stream become asynchronous:
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $()
 
 promise$.then((value) => {

@@ -55,7 +55,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
 
   const promise$ = $('1')
   const observable$ = promise$.then((value) => Number(value)) // Automatically infers observable.value type as number
@@ -74,7 +74,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
 
   const promise$ = $<{ a: number; b: { c: number } }>()
   const observable$ = promise$.$then((value) => {
@@ -107,7 +107,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
 
   const promise$ = $('1')
   const observable$ = promise$.thenOnce((value) => console.log(value))
@@ -147,7 +147,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
 
   const promise$ = $('1')
   const observable$ = promise$.thenImmediate((value) => console.log(value)) // Output 1
@@ -178,7 +178,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
 
   const promise$ = $()
   observable$ = promise$.catch((error) => {
@@ -203,7 +203,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 
 - Example
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
   const promise$ = $()
   observable$ = promise$.finally(() => {
     console.log('finally')
@@ -226,7 +226,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $, delay } from 'pipel'
+  import { $, delay } from 'pipeljs'
   const promise$ = $()
   promise$.pipe(delay(1000)).then((value) => {
     console.log(value)
@@ -276,7 +276,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $, delay } from 'pipel'
+  import { $, delay } from 'pipeljs'
 
   const promise$ = $('1').use(delay)
   promise$.delay(1000).then((value) => {
@@ -306,7 +306,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 
 - Example
   ```typescript
-  import { $, console } from 'pipel'
+  import { $, console } from 'pipeljs'
   const promise$ = $('1').use(console)
   promise$.next('2') // Output 2
   promise$.remove(console)
@@ -331,7 +331,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
 
   const promise$ = $(1)
   const observable$ = promise$.then((value) => value + 1)
@@ -360,7 +360,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
 
   const promise$ = $(1)
   const observable$ = promise$.then((value) => value + 1)
@@ -388,7 +388,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
 
   const promise$ = $(1)
 
@@ -427,7 +427,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
   const promise$ = $(1)
   const observable$ = promise$.then((value) => console.log(value))
 
@@ -463,7 +463,7 @@ Observable instance's then, thenOnce, thenImmediate, pipe methods return Observa
 - Example
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
   const promise$ = $(1)
   promise$.afterSetValue((value) => console.log(value))
   promise$.next(2) // Output 2

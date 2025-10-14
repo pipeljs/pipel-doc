@@ -30,7 +30,7 @@ change: <T>(differ: (value: T | undefined) => any) =>
 ## 示例
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $<{ user: { name: string; age: number } }>()
 promise$.pipe(change((value) => value?.user.name)).then(() => console.log('用户名变更'))
@@ -42,7 +42,7 @@ promise$.next({ user: { name: 'Alice', age: 30 } }) // 输出: 用户名变更
 ```
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $<{ items: number[] }>()
 promise$.pipe(change((value) => value?.items?.length)).then(() => console.log('数组长度变更'))

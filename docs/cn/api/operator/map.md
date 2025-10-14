@@ -28,7 +28,7 @@ type map = <T, R>(
 ### 同步转换
 
 ```typescript
-import { $, map } from 'pipel'
+import { $, map } from 'pipeljs'
 
 const stream$ = $()
 const mapped$ = stream$.pipe(map((value: number) => value * 2))
@@ -44,7 +44,7 @@ stream$.next(2) // 输出: mapped: 4
 ### 异步转换
 
 ```typescript
-import { $, map } from 'pipel'
+import { $, map } from 'pipeljs'
 
 const stream$ = $()
 const mapped$ = stream$.pipe(map((value: string) => Promise.resolve(`${value}-async`)))
@@ -59,7 +59,7 @@ stream$.next('a') // 输出: async-mapped: a-async
 ### 错误处理
 
 ```typescript
-import { $, map } from 'pipel'
+import { $, map } from 'pipeljs'
 
 const stream$ = $()
 const mapped$ = stream$.pipe(

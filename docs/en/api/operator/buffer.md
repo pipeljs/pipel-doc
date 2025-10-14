@@ -32,7 +32,7 @@ type buffer = <T>(
 ### Scenario 1: Basic data buffering
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -62,7 +62,7 @@ trigger$.next('trigger') // Output: Buffered data: [4, 5]
 ### Scenario 2: Handling empty buffer
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -80,7 +80,7 @@ trigger$.next('trigger') // Output: Buffered data: []
 ### Scenario 3: Batch data processing
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const dataStream$ = $()
 const batchTrigger$ = $()
@@ -104,7 +104,7 @@ batchTrigger$.next('process') // Output: Processing 100 items: [1, 2, 3, ..., 10
 ### Scenario 4: Awaiting asynchronous values
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -133,7 +133,7 @@ trigger$.next('trigger')
 ### Scenario 5: Not awaiting asynchronous values
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()

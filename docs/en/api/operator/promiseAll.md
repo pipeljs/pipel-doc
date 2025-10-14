@@ -25,7 +25,7 @@ type promiseAllNoAwait: <T extends (Stream | Observable)[]>(...args$: T) => Stre
 ### Basic usage
 
 ```typescript
-import { $, promiseAll } from 'pipel'
+import { $, promiseAll } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')
@@ -52,7 +52,7 @@ stream2$.next('new')
 ### Error handling example
 
 ```typescript
-import { $, promiseAll } from 'pipel'
+import { $, promiseAll } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()
@@ -78,7 +78,7 @@ stream2$.next('success2')
 ### Async await example
 
 ```typescript
-import { $, promiseAll } from 'pipel'
+import { $, promiseAll } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()

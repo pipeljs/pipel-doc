@@ -23,7 +23,7 @@ type promiseRace: <T extends (Stream | Observable)[]>(...args$: T) => Stream<Str
 ### 基本使用
 
 ```typescript
-import { $, promiseRace } from 'pipel'
+import { $, promiseRace } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')
@@ -43,7 +43,7 @@ stream2$.next('code')
 ### 竞争获胜者示例
 
 ```typescript
-import { $, promiseRace } from 'pipel'
+import { $, promiseRace } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()
@@ -69,7 +69,7 @@ stream2$.next('第二个再次发送')
 ### 错误处理示例
 
 ```typescript
-import { $, promiseRace } from 'pipel'
+import { $, promiseRace } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()

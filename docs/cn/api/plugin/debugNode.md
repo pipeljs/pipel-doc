@@ -33,7 +33,7 @@ debugNode: (condition?: (value: any) => boolean, conditionError?: (value: any) =
 ### 场景 1：基础使用（总是触发）
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $().use(debugNode())
 
@@ -46,7 +46,7 @@ promise$.next(1)
 ### 场景 2：条件调试（只在特定值时触发）
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 只在值大于 5 时触发调试器
 const promise$ = $().use(debugNode((value) => value > 5))
@@ -60,7 +60,7 @@ promise$.next(6) // 会触发调试器（6 > 5，条件返回 true）
 ### 场景 3：错误条件调试
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 只在错误消息包含 'critical' 时触发调试器
 const promise$ = $().use(debugNode(undefined, (error) => error.message.includes('critical')))
@@ -77,7 +77,7 @@ promise$.next(criticalError) // 会触发调试器（包含 'critical'，条件�
 ### 场景 4：同时设置成功和失败条件
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 同时设置成功和失败的条件
 const promise$ = $().use(
@@ -102,7 +102,7 @@ promise$.next(normalError) // 不会触发调试器（不包含 'fatal'，条件
 ### 场景 5：复杂条件判断
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 interface UserData {
   id: number
@@ -132,7 +132,7 @@ userStream$.next({ id: 3, name: 'InactiveAdmin', role: 'admin', active: false })
 ### 场景 6：插件移除
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const plugin = debugNode()
 const stream$ = $().use(plugin)

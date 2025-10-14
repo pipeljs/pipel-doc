@@ -25,7 +25,7 @@ type skip = <T>(skipTime: number) => (observable$: Observable<T>) => Observable<
 ## 示例
 
 ```typescript
-import { $, skip } from 'pipel'
+import { $, skip } from 'pipeljs'
 
 const stream$ = $()
 

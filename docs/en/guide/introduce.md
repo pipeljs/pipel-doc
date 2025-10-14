@@ -9,7 +9,7 @@ pipel is a promise-like stream programming library, well-suited for reactive pro
 pipel enhances promise, allowing promise to publish continuously! If you are familiar with Promise, you already grasp the basics of pipel.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $()
 
@@ -31,7 +31,7 @@ console.log('end')
 ```
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $(0)
 const observable$ = promise$.thenImmediate(v => v + 1)

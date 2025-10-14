@@ -25,7 +25,7 @@ type concat: <T extends (Stream | Observable)[]>(...args$: T) => Stream<StreamTu
 ## Examples
 
 ```typescript
-import { $, concat } from 'pipel'
+import { $, concat } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()

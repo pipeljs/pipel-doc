@@ -24,7 +24,7 @@ type promiseAllNoAwait: <T extends (Stream | Observable)[]>(...args$: T) => Stre
 ### Basic usage
 
 ```typescript
-import { $, promiseAllNoAwait } from 'pipel'
+import { $, promiseAllNoAwait } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')
@@ -51,7 +51,7 @@ stream2$.next('new')
 ### Comparison with promiseAll
 
 ```typescript
-import { $, promiseAll, promiseAllNoAwait } from 'pipel'
+import { $, promiseAll, promiseAllNoAwait } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()
@@ -85,7 +85,7 @@ setTimeout(() => {
 ### Error Handling Example
 
 ```typescript
-import { $, promiseAllNoAwait } from 'pipel'
+import { $, promiseAllNoAwait } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()
@@ -112,7 +112,7 @@ stream2$.next('success2')
 ### High Performance Scenario Example
 
 ```typescript
-import { $, promiseAllNoAwait } from 'pipel'
+import { $, promiseAllNoAwait } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()
@@ -143,7 +143,7 @@ const interval = setInterval(() => {
 ### Status Reset Behavior Comparison
 
 ```typescript
-import { $, promiseAll, promiseAllNoAwait } from 'pipel'
+import { $, promiseAll, promiseAllNoAwait } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()
@@ -175,7 +175,7 @@ setTimeout(() => {
 ### Real-world Application Scenario
 
 ```typescript
-import { $, promiseAllNoAwait } from 'pipel'
+import { $, promiseAllNoAwait } from 'pipeljs'
 
 // Real-time data monitoring scenario
 const cpuUsage$ = $() // CPU usage

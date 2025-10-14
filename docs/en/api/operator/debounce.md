@@ -26,7 +26,7 @@ type debounce = (debounceTime: number) => (observable$: Observable) => Observabl
 ### Scenario 1: Basic debouncing
 
 ```typescript
-import { $, debounce } from 'pipel'
+import { $, debounce } from 'pipeljs'
 
 const stream$ = $()
 

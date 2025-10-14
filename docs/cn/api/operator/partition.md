@@ -45,7 +45,7 @@ type partition: <T>(
 ## 示例
 
 ```typescript
-import { $, partition } from 'pipel'
+import { $, partition } from 'pipeljs'
 
 const stream$ = $()
 

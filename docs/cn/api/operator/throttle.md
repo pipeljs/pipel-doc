@@ -26,7 +26,7 @@ type throttle = (throttleTime: number) => (observable$: Observable) => Observabl
 ## 示例
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const stream$ = $()
 

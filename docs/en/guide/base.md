@@ -7,7 +7,7 @@ In pipel, there are two types of streams: [Stream](/en/api/stream) and [Observab
 The main difference between Stream and Observable is that a Stream can actively push data, while an Observable can only passively receive pushed data or repeat the last push.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $()
 
@@ -25,7 +25,7 @@ Pushing means sending new data sources to subscription nodes. There are active a
 - [Stream](/en/api/stream) can use the next method for active push; all subscription nodes will receive the pushed data.
 
 ```typescript
-import { Stream } from 'pipel'
+import { Stream } from 'pipeljs'
 
 const promise$ = new Stream()
 
@@ -37,7 +37,7 @@ promise$.next('hello') // Output: hello
 - You can also use the set method to push data, which differs from next in that set pushes immutable data based on the previous data.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $({ a: 1, b: { c: 2 } })
 const oldValue = promise$.value
 
@@ -89,7 +89,7 @@ Only [Stream](/en/api/stream) can be completed. After a stream is completed:
 There are two ways to complete a stream:
 
 ```typescript
-import { Stream } from 'pipel'
+import { Stream } from 'pipeljs'
 
 const promise$ = new Stream()
 

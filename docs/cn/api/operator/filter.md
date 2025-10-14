@@ -24,7 +24,7 @@ type filter = <T>(condition: (value: T) => boolean) => (observable$: Observable<
 ## 示例
 
 ```typescript
-import { $, filter } from 'pipel'
+import { $, filter } from 'pipeljs'
 
 const stream$ = $()
 
@@ -42,7 +42,7 @@ stream$.next(4) // 输出: 过滤后的值: 4
 ```
 
 ```typescript
-import { $, filter } from 'pipel'
+import { $, filter } from 'pipeljs'
 
 const stream$ = $()
 const string$ = stream$.pipe(filter((value) => typeof value === 'string'))
@@ -54,7 +54,7 @@ stream$.next('hello') // 输出: 字符串: hello
 ```
 
 ```typescript
-import { $, filter } from 'pipel'
+import { $, filter } from 'pipeljs'
 
 const stream$ = $()
 const hasId$ = stream$.pipe(

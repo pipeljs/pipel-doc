@@ -7,7 +7,7 @@ pipel 从底层实现了类似 Promise 的使用体验，但是 promise 是推�
 pipel 的流是同步的，而 promise 是异步的
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $()
 
 promise$.then((value) => {
@@ -41,7 +41,7 @@ console.log('start')
 仅当 pipel 推送异步数据时，流才会变成异步的
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $()
 
 promise$.then((value) => {

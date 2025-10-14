@@ -31,7 +31,7 @@ type thenPluginFn<T> = (unsubscribe: () => void, observable: Observable<T>) => v
 ### 场景 1：定时自动取消订阅
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 创建定时取消订阅插件
 const autoUnsubscribePlugin = {
@@ -61,7 +61,7 @@ setTimeout(() => {
 
 ```typescript
 import { getCurrentScope, onScopeDispose } from 'vue'
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // Vue 组件自动清理插件
 const vueLifecyclePlugin = {
@@ -93,7 +93,7 @@ stream$.next('hello') // 输出: 处理结果: HELLO
 ### 场景 3：条件性取消订阅
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 条件取消订阅插件
 const conditionalUnsubscribePlugin = {

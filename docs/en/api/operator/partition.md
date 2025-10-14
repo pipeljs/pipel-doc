@@ -45,7 +45,7 @@ Returns an array of two Streams: [stream of satisfied values, stream of unsatisf
 ## Example
 
 ```typescript
-import { $, partition } from 'pipel'
+import { $, partition } from 'pipeljs'
 
 const stream$ = $()
 
@@ -80,7 +80,7 @@ stream$.next(Promise.reject('4')) // rejected even -> selected
 ## Status-based Partitioning Example
 
 ```typescript
-import { $, partition } from 'pipel'
+import { $, partition } from 'pipeljs'
 
 const stream$ = $()
 
@@ -115,7 +115,7 @@ stream$.next(Promise.reject('4')) // rejected even -> selected
 ## Index-based Partitioning Example
 
 ```typescript
-import { $, partition } from 'pipel'
+import { $, partition } from 'pipeljs'
 
 const stream$ = $()
 
@@ -137,7 +137,7 @@ stream$.next('c') // index 3
 ## Using thisArg Example
 
 ```typescript
-import { $, partition } from 'pipel'
+import { $, partition } from 'pipeljs'
 
 const stream$ = $()
 
@@ -168,7 +168,7 @@ stream$.next('hello')
 ## Error Handling Example
 
 ```typescript
-import { $, partition } from 'pipel'
+import { $, partition } from 'pipeljs'
 
 const stream$ = $()
 
@@ -191,7 +191,7 @@ stream$.next('error') // Predicate throws error, value goes to unselected stream
 ## Input Validation Example
 
 ```typescript
-import { $, partition } from 'pipel'
+import { $, partition } from 'pipeljs'
 
 // Correct input
 const stream$ = $()

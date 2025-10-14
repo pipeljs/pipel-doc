@@ -9,7 +9,7 @@ pipel 支持四种类型插件：then、thenAll、execute、executeAll
 在创建订阅节点时触发，接收取消订阅函数和当前观察者实例作为参数
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 自定义then插件, 1s后取消节点订阅
 const thenPlugin = {
@@ -34,7 +34,7 @@ promise$.next(3) // 不输出
 流所有的节点创建订阅时触发，只能用于 Stream 流， Observable 流节点使用会抛出错误
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 自定义thenAll插件, 为流所有的节点的then操作添加统一处理
 const thenAllPlugin = {
@@ -78,7 +78,7 @@ promise$.next(2)
 在节点执行时触发，可以修改执行结果，如果节点有多个 execute 插件，会按照插件的顺序依次执行, 前一个插件的结果会作为下一个插件的输入并将最后的结果作为当前节点的返回值。
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 自定义execute插件, 执行节点时修改结果
 const executePlugin = {
@@ -104,7 +104,7 @@ promise$.next(1)
 如果节点有多个 executeAll 插件，会按照插件的顺序依次执行, 前一个插件的结果会作为下一个插件的输入并将最后的结果作为当前节点的返回值。
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 自定义executeAll插件, 为根流及其所有子节点的execute操作添加统一处理
 const executeAllPlugin = {

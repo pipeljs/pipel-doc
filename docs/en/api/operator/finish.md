@@ -29,7 +29,7 @@ Returns a new Stream, which emits an array containing the final values of all in
 ## Example
 
 ```typescript
-import { $, finish } from 'pipel'
+import { $, finish } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')

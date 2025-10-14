@@ -27,7 +27,7 @@ type set = <T>(setter: (value: T) => void) => (observable$: Observable<T>) => Ob
 ### Object Modification
 
 ```typescript
-import { $, set } from 'pipel'
+import { $, set } from 'pipeljs'
 
 const stream$ = $()
 const modifiedStream$ = stream$.pipe(
@@ -46,7 +46,7 @@ console.log(initialData.age) // 25 (original data unchanged)
 ### Array Modification
 
 ```typescript
-import { $, set } from 'pipel'
+import { $, set } from 'pipeljs'
 
 const stream$ = $()
 const modifiedStream$ = stream$.pipe(

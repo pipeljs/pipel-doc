@@ -20,7 +20,7 @@ type merge: <T extends (Stream | Observable)[]>(...args$: T) => Stream<StreamTup
 ## Example
 
 ```typescript
-import { $, merge } from 'pipel'
+import { $, merge } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')
@@ -45,7 +45,7 @@ stream1$.next(3)
 ## Example
 
 ```typescript
-import { $, merge } from 'pipel'
+import { $, merge } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')

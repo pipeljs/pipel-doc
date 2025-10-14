@@ -32,7 +32,7 @@ type buffer = <T>(
 ### 场景 1：基础数据缓冲
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -62,7 +62,7 @@ trigger$.next('trigger') // 输出: 缓冲的数据: [4, 5]
 ### 场景 2：空缓冲区处理
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -80,7 +80,7 @@ trigger$.next('trigger') // 输出: 缓冲的数据: []
 ### 场景 3：批量数据处理
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const dataStream$ = $()
 const batchTrigger$ = $()
@@ -104,7 +104,7 @@ batchTrigger$.next('process') // 输出: 处理 100 条数据: [1, 2, 3, ..., 10
 ### 场景 4：异步值的等待处理
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -133,7 +133,7 @@ trigger$.next('trigger')
 ### 场景 5：不等待异步值
 
 ```typescript
-import { $, buffer } from 'pipel'
+import { $, buffer } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
