@@ -4,7 +4,7 @@
 
 ```bash
 # npm
-npm install pipel
+npm install pipeljs
 
 # yarn
 yarn add pipel
