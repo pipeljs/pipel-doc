@@ -27,7 +27,7 @@ consoleNode: (resolvePrefix?: string, rejectPrefix?: string) => {
 ### 场景 1：基础调试输出
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const stream$ = $().use(consoleNode())
 
@@ -47,7 +47,7 @@ stream$.next(4)
 ### 场景 2：自定义前缀
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const stream$ = $().use(consoleNode('custom'))
 
@@ -62,7 +62,7 @@ stream$.next(promise)
 ### 场景 3：自定义成功和失败前缀
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const stream$ = $().use(consoleNode('success', 'failure'))
 
@@ -79,7 +79,7 @@ stream$.next(rejectedPromise)
 ### 场景 4：与防抖操作符结合
 
 ```typescript
-import { $, debounce } from 'pipel'
+import { $, debounce } from 'pipeljs'
 
 const promise$ = $()
   .pipe(debounce(100))
@@ -107,7 +107,7 @@ promise$.next(5)
 ### 场景 5：插件移除
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const plugin = consoleNode()
 const stream$ = $().use(plugin)

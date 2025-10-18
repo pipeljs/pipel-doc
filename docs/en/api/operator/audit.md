@@ -33,7 +33,7 @@ type audit = <T>(
 ### Scenario 1: Basic trigger emission
 
 ```typescript
-import { $, audit } from 'pipel'
+import { $, audit } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -56,7 +56,7 @@ trigger$.next('trigger') // Output: audited: 3
 ### Scenario 2: Handling rapidly changing data
 
 ```typescript
-import { $, audit } from 'pipel'
+import { $, audit } from 'pipeljs'
 
 const searchInput$ = $()
 const searchTrigger$ = $()
@@ -80,7 +80,7 @@ searchTrigger$.next('search') // Output: Search keyword: apple
 ### Scenario 3: Awaiting asynchronous values
 
 ```typescript
-import { $, audit } from 'pipel'
+import { $, audit } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -106,7 +106,7 @@ trigger$.next('trigger')
 ### Scenario 4: Not awaiting asynchronous values
 
 ```typescript
-import { $, audit } from 'pipel'
+import { $, audit } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()

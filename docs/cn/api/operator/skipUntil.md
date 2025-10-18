@@ -28,7 +28,7 @@ type skipUntil = <T>(trigger$: Stream | Observable) => (observable$: Observable<
 ### 基本用法
 
 ```typescript
-import { $, skipUntil } from 'pipel'
+import { $, skipUntil } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()

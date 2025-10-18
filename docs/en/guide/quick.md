@@ -4,7 +4,7 @@
 
 ```bash
 # npm
-npm install pipel
+npm install pipeljs
 
 # yarn
 yarn add pipel
@@ -20,7 +20,7 @@ pnpm add pipel
 #### Create an empty stream
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // Create an empty stream
 const stream$ = $()
@@ -55,7 +55,7 @@ stream$.next('new data') // Output: Received data: new data
 Like Promise, pipel supports chained operations:
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const stream$ = $()
 
@@ -110,7 +110,7 @@ console.log(oldValue?.key1 === stream$.value?.key1) // true - unchanged object r
 ### Step 4: Partial Subscription
 
 ```typescript
-import { $, change } from 'pipel'
+import { $, change } from 'pipeljs'
 
 const stream$ = $({ key1: { key11: 'test' }, key2: { key22: 'test' } })
 
@@ -130,7 +130,7 @@ stream$.set((state) => {
 ### Step 5: Conditional Subscription
 
 ```typescript
-import { $, filter } from 'pipel'
+import { $, filter } from 'pipeljs'
 const stream$ = $()
 
 // Only process even numbers
@@ -149,7 +149,7 @@ stream$.next(4) // Output: Even number: 4
 #### Combine the latest values of multiple streams
 
 ```typescript
-import { $, combine } from 'pipel'
+import { $, combine } from 'pipeljs'
 
 const name$ = $('john')
 const age$ = $(25)
@@ -171,7 +171,7 @@ age$.next(31) // Output: User: lucy, Age: 31
 #### Wait for all streams to complete
 
 ```typescript
-import { $, finish } from 'pipel'
+import { $, finish } from 'pipeljs'
 
 const task1$ = $()
 const task2$ = $()
@@ -196,7 +196,7 @@ task3$.next('Task 3 completed', true)
 #### User Input Debouncing
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const searchInput$ = $()
 
@@ -217,7 +217,7 @@ searchInput$.next('pipel')
 #### Object State Management
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // Application state
 const appState$ = $({

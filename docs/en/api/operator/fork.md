@@ -27,7 +27,7 @@ type fork: <T>(arg$: Stream<T> | Observable<T>, autoUnsubscribe?: boolean) => St
 ## Example
 
 ```typescript
-import { $, fork } from 'pipel'
+import { $, fork } from 'pipeljs'
 
 const source$ = $('initial value')
 const forked$ = fork(source$)

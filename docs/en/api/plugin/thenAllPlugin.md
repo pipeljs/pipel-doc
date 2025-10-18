@@ -50,8 +50,8 @@ thenAllPlugin: <T>(
 ### 场景 1：流完成后的清理工作
 
 ```typescript
-import { $ } from 'pipel'
-import { thenAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenAllPlugin } from 'pipeljs'
 
 const cleanupPlugin = () => ({
   executeAll: ({ result }: any) => {
@@ -82,8 +82,8 @@ stream$.next(5)
 ### 场景 2：异步操作完成后的处理
 
 ```typescript
-import { $ } from 'pipel'
-import { thenAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenAllPlugin } from 'pipeljs'
 
 const notificationPlugin = () => ({
   executeAll: ({ result }: any) => {
@@ -121,8 +121,8 @@ stream$.next(10)
 ### 场景 3：错误处理和恢复
 
 ```typescript
-import { $ } from 'pipel'
-import { thenAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenAllPlugin } from 'pipeljs'
 
 const errorReportPlugin = () => ({
   executeAll: ({ result, status }: any) => {
@@ -167,8 +167,8 @@ stream$.next(-3)
 ### 场景 4：性能统计和监控
 
 ```typescript
-import { $ } from 'pipel'
-import { thenAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenAllPlugin } from 'pipeljs'
 
 const performancePlugin = () => {
   const startTime = Date.now()
@@ -214,8 +214,8 @@ stream$.next(15)
 ### 场景 5：数据验证和保存
 
 ```typescript
-import { $ } from 'pipel'
-import { thenAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenAllPlugin } from 'pipeljs'
 
 const validationPlugin = () => ({
   executeAll: ({ result }: any) => {
@@ -261,8 +261,8 @@ stream$.next(3.7)
 ### 场景 6：条件执行插件
 
 ```typescript
-import { $ } from 'pipel'
-import { thenAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenAllPlugin } from 'pipeljs'
 
 const conditionalPlugin = (condition: (result: any) => boolean, action: string) => ({
   executeAll: ({ result }: any) => {
@@ -299,8 +299,8 @@ stream$.next(3)
 ### 场景 7：插件链式处理
 
 ```typescript
-import { $ } from 'pipel'
-import { thenAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenAllPlugin } from 'pipeljs'
 
 const formatPlugin = () => ({
   executeAll: ({ result }: any) => {
@@ -338,8 +338,8 @@ stream$.next('Hello World')
 ### 场景 8：移除插件组合
 
 ```typescript
-import { $ } from 'pipel'
-import { thenAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenAllPlugin } from 'pipeljs'
 
 const plugin1 = () => ({
   executeAll: ({ result }: any) => {

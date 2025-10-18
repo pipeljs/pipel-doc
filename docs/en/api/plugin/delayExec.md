@@ -39,8 +39,8 @@ delayExec: (delay: number) => {
 ### 场景 1：基本延迟执行
 
 ```typescript
-import { $ } from 'pipel'
-import { delayExec } from 'pipel'
+import { $ } from 'pipeljs'
+import { delayExec } from 'pipeljs'
 
 const stream$ = $().use(delayExec(1000)) // 延迟 1 秒
 
@@ -57,8 +57,8 @@ stream$.next(1)
 ### 场景 2：流链中的延迟执行
 
 ```typescript
-import { $ } from 'pipel'
-import { delayExec } from 'pipel'
+import { $ } from 'pipeljs'
+import { delayExec } from 'pipeljs'
 
 const promise$ = $()
 
@@ -81,8 +81,8 @@ promise$.next(1)
 ### 场景 3：多个延迟执行
 
 ```typescript
-import { $ } from 'pipel'
-import { delayExec } from 'pipel'
+import { $ } from 'pipeljs'
+import { delayExec } from 'pipeljs'
 
 const promise$ = $()
   .use(delayExec(200))
@@ -100,8 +100,8 @@ promise$.next(1).then((result) => {
 ### 场景 4：与 Promise 结合
 
 ```typescript
-import { $ } from 'pipel'
-import { delayExec } from 'pipel'
+import { $ } from 'pipeljs'
+import { delayExec } from 'pipeljs'
 
 const stream$ = $().use(delayExec(1000))
 
@@ -122,8 +122,8 @@ stream$.next(100).then((result) => {
 ### 场景 5：错误处理
 
 ```typescript
-import { $ } from 'pipel'
-import { delayExec } from 'pipel'
+import { $ } from 'pipeljs'
+import { delayExec } from 'pipeljs'
 
 const stream$ = $()
   .use(delayExec(500))
@@ -147,8 +147,8 @@ stream$.next(rejectedPromise)
 ### 场景 6：动态延迟时间
 
 ```typescript
-import { $ } from 'pipel'
-import { delayExec } from 'pipel'
+import { $ } from 'pipeljs'
+import { delayExec } from 'pipeljs'
 
 function createDelayedStream(delay: number) {
   return $().use(delayExec(delay))
@@ -173,8 +173,8 @@ slowStream.next('慢速').then((result) => {
 ### 场景 7：移除插件
 
 ```typescript
-import { $ } from 'pipel'
-import { delayExec } from 'pipel'
+import { $ } from 'pipeljs'
+import { delayExec } from 'pipeljs'
 
 const plugin = delayExec(1000)
 const stream$ = $().use(plugin)
@@ -195,8 +195,8 @@ stream$.next(2)
 ### 场景 8：性能测试
 
 ```typescript
-import { $ } from 'pipel'
-import { delayExec } from 'pipel'
+import { $ } from 'pipeljs'
+import { delayExec } from 'pipeljs'
 
 async function performanceTest() {
   const delays = [100, 200, 300, 500, 1000]

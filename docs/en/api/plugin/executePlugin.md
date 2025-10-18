@@ -49,8 +49,8 @@ executePlugin: <T>(
 ### 场景 1：在特定节点执行多个插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executePlugin, debugNode, consoleNode } from 'pipel'
+import { $ } from 'pipeljs'
+import { executePlugin, debugNode, consoleNode } from 'pipeljs'
 
 const plugins = [debugNode(), consoleNode()]
 const promise$ = $()
@@ -67,8 +67,8 @@ promise$.next(1)
 ### 场景 2：自定义插件组合
 
 ```typescript
-import { $ } from 'pipel'
-import { executePlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executePlugin } from 'pipeljs'
 
 // 自定义插件
 const loggerPlugin = (prefix: string) => ({
@@ -107,8 +107,8 @@ stream$.next(-3)
 ### 场景 3：条件执行插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executePlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executePlugin } from 'pipeljs'
 
 const conditionalPlugin = (condition: (value: any) => boolean, message: string) => ({
   execute: ({ result }: any) => {
@@ -138,8 +138,8 @@ stream$.next(7)
 ### 场景 4：数据转换插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executePlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executePlugin } from 'pipeljs'
 
 const transformPlugin = (name: string, transform: (value: any) => any) => ({
   execute: ({ result }: any) => {
@@ -171,8 +171,8 @@ stream$.next(8)
 ### 场景 5：错误处理插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executePlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executePlugin } from 'pipeljs'
 
 const errorHandlerPlugin = () => ({
   execute: ({ result, status }: any) => {
@@ -221,8 +221,8 @@ stream$.next(-1)
 ### 场景 6：性能监控插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executePlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executePlugin } from 'pipeljs'
 
 const performancePlugin = (name: string) => {
   let startTime: number
@@ -268,8 +268,8 @@ stream$.next(10)
 ### 场景 7：插件状态管理
 
 ```typescript
-import { $ } from 'pipel'
-import { executePlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executePlugin } from 'pipeljs'
 
 class StatefulPlugin {
   private count = 0
@@ -316,8 +316,8 @@ console.log('统计信息:', statefulPlugin.getStats())
 ### 场景 8：移除插件组合
 
 ```typescript
-import { $ } from 'pipel'
-import { executePlugin, debugNode, consoleNode } from 'pipel'
+import { $ } from 'pipeljs'
+import { executePlugin, debugNode, consoleNode } from 'pipeljs'
 
 const plugins = [debugNode(), consoleNode()]
 const pluginCombination = executePlugin(plugins)

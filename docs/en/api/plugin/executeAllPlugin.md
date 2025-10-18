@@ -50,8 +50,8 @@ executeAllPlugin: <T>(
 ### 场景 1：执行多个调试插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executeAllPlugin, debugAll, consoleAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { executeAllPlugin, debugAll, consoleAll } from 'pipeljs'
 
 const plugins = [debugAll(), consoleAll()]
 const stream$ = $().use(executeAllPlugin(plugins))
@@ -65,8 +65,8 @@ stream$.next(1)
 ### 场景 2：自定义插件组合
 
 ```typescript
-import { $ } from 'pipel'
-import { executeAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executeAllPlugin } from 'pipeljs'
 
 // 自定义插件
 const loggerPlugin = (prefix: string) => ({
@@ -94,8 +94,8 @@ stream$.next('测试数据')
 ### 场景 3：条件执行插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executeAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executeAllPlugin } from 'pipeljs'
 
 const conditionalPlugin = (condition: boolean) => ({
   executeAll: ({ result }: any) => {
@@ -117,8 +117,8 @@ stream$.next('测试')
 ### 场景 4：插件链式处理
 
 ```typescript
-import { $ } from 'pipel'
-import { executeAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executeAllPlugin } from 'pipeljs'
 
 const transformPlugin = (transform: (value: any) => any) => ({
   executeAll: ({ result }: any) => {
@@ -145,8 +145,8 @@ stream$.next(5)
 ### 场景 5：错误处理插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executeAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executeAllPlugin } from 'pipeljs'
 
 const errorHandlerPlugin = () => ({
   executeAll: ({ result, status }: any) => {
@@ -172,8 +172,8 @@ stream$.next(Promise.reject(new Error('测试错误')))
 ### 场景 6：性能监控插件
 
 ```typescript
-import { $ } from 'pipel'
-import { executeAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executeAllPlugin } from 'pipeljs'
 
 const performancePlugin = () => {
   const startTime = Date.now()
@@ -212,8 +212,8 @@ stream$.next(10)
 ### 场景 7：移除插件组合
 
 ```typescript
-import { $ } from 'pipel'
-import { executeAllPlugin, debugAll, consoleAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { executeAllPlugin, debugAll, consoleAll } from 'pipeljs'
 
 const plugins = [debugAll(), consoleAll()]
 const pluginCombination = executeAllPlugin(plugins)
@@ -230,8 +230,8 @@ stream$.next(2)
 ### 场景 8：动态插件管理
 
 ```typescript
-import { $ } from 'pipel'
-import { executeAllPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { executeAllPlugin } from 'pipeljs'
 
 class PluginManager {
   private plugins: any[] = []

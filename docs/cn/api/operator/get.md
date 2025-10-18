@@ -29,7 +29,7 @@ type get = <T, F>(
 ## 使用场景
 
 ```typescript
-import { $, get } from 'pipel'
+import { $, get } from 'pipeljs'
 
 const source$ = $({ a: 1, b: { c: 2 } })
 const b$ = source$.pipe(get((value) => value?.b))
@@ -52,7 +52,7 @@ source$.set((value) => {
 ```
 
 ```typescript
-import { $, get } from 'pipel'
+import { $, get } from 'pipeljs'
 
 const source$ = $({
   data: {

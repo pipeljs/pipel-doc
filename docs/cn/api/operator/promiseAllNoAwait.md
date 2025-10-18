@@ -24,7 +24,7 @@ type promiseAllNoAwait: <T extends (Stream | Observable)[]>(...args$: T) => Stre
 ### 基本使用
 
 ```typescript
-import { $, promiseAllNoAwait } from 'pipel'
+import { $, promiseAllNoAwait } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')
@@ -51,7 +51,7 @@ stream2$.next('new')
 ### 与 promiseAll 的对比
 
 ```typescript
-import { $, promiseAll, promiseAllNoAwait } from 'pipel'
+import { $, promiseAll, promiseAllNoAwait } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()

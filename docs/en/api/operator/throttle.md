@@ -26,7 +26,7 @@ type throttle = (throttleTime: number) => (observable$: Observable) => Observabl
 ## Examples
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const stream$ = $()
 
@@ -53,7 +53,7 @@ setTimeout(() => stream$.next(4), 90) // Throttled
 ### Scenario 2: Multiple throttle batches
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const stream$ = $()
 const throttled$ = stream$.pipe(throttle(100))
@@ -84,7 +84,7 @@ setTimeout(() => {
 ### Scenario 3: Long interval emissions
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const stream$ = $()
 const throttled$ = stream$.pipe(throttle(50))
@@ -108,7 +108,7 @@ setTimeout(() => {
 ### Scenario 4: Handle Promise states
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const stream$ = $()
 const throttled$ = stream$.pipe(throttle(100))
@@ -138,7 +138,7 @@ setTimeout(() => {
 ### Scenario 5: Zero delay throttling
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const stream$ = $()
 const throttled$ = stream$.pipe(throttle(0))
@@ -156,7 +156,7 @@ stream$.next(3) // Output: Immediate: 3
 ### Scenario 6: Search input optimization
 
 ```typescript
-import { $, throttle } from 'pipel'
+import { $, throttle } from 'pipeljs'
 
 const searchInput$ = $()
 const throttledSearch$ = searchInput$.pipe(throttle(300))

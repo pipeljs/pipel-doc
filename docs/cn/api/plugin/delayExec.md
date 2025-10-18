@@ -26,7 +26,7 @@ delayExec: (delayTime: number) => {
 ### 场景 1：基础延迟
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const stream$ = $().use(delayExec(100))
 
@@ -41,7 +41,7 @@ stream$.next(1)
 ### 场景 2：与其他插件结合
 
 ```typescript
-import { $, consoleNode } from 'pipel'
+import { $, consoleNode } from 'pipeljs'
 
 const promise$ = $().use(delayExec(100), consoleNode())
 
@@ -60,7 +60,7 @@ promise$.next(1)
 ### 场景 3：流水线延迟处理
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const processingStream$ = $()
 

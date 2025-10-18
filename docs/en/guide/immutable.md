@@ -7,7 +7,7 @@ pipel supports immutable data, implemented at the bottom layer using [limu](http
 The [set](/en/api/stream.html#set) method of a Stream can immutably modify the node's data.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $({ a: 1, b: { c: 2 } })
 const oldValue = promise$.value
 
@@ -23,7 +23,7 @@ console.log(oldValue.b === newValue.b) // true
 Observable streams can modify the data flowing through the current node using the [set](/en/api/operator/set) operator.
 
 ```typescript
-import { $, set } from 'pipel'
+import { $, set } from 'pipeljs'
 const promise$ = $({ a: 1, b: { c: 2 } })
 const observer1$ = promise$.pipe(set((state) => (state.a = 3)))
 const observer2$ = observer1$.pipe(set((state) => (state.a = 4)))

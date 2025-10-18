@@ -5,7 +5,7 @@
 When using [$](/en/api/$) to create a stream, pipel will automatically infer the type of the initial value.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $({ a: '1', b: 2 })
 promise$.value // {a: string, b: number}
 
@@ -18,7 +18,7 @@ promise$.value // {a: string, b: number} | undefined
 When using [then](/en/api/observable.html#then) to subscribe to a stream, pipel will automatically infer the type of the subscription node.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $({ a: '1', b: 2 })
 // Automatically infers the type of the then data parameter as {a: string, b: number}
 const observable$ = promise$.then((data) => ({ c: data.a, d: data.b }))
@@ -31,7 +31,7 @@ observable$.value
 When using operators, pipel will automatically infer the operator types.
 
 ```typescript
-import { $, get } from 'pipel'
+import { $, get } from 'pipeljs'
 const promise$ = $({ a: '1', b: 2 })
 // Automatically infers the type of the pipe data parameter as {a: string, b: number}
 const observable$ = promise$.pipe(get((state) => state.a))

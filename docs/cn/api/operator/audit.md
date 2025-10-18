@@ -33,7 +33,7 @@ type audit = <T>(
 ### 场景 1：基础触发发出
 
 ```typescript
-import { $, audit } from 'pipel'
+import { $, audit } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -56,7 +56,7 @@ trigger$.next('trigger') // 输出: audited: 3
 ### 场景 2：处理快速变化的数据
 
 ```typescript
-import { $, audit } from 'pipel'
+import { $, audit } from 'pipeljs'
 
 const searchInput$ = $()
 const searchTrigger$ = $()
@@ -80,7 +80,7 @@ searchTrigger$.next('search') // 输出: 搜索关键词: apple
 ### 场景 3：异步值的等待处理
 
 ```typescript
-import { $, audit } from 'pipel'
+import { $, audit } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()
@@ -106,7 +106,7 @@ trigger$.next('trigger')
 ### 场景 4：不等待异步值
 
 ```typescript
-import { $, audit } from 'pipel'
+import { $, audit } from 'pipeljs'
 
 const source$ = $()
 const trigger$ = $()

@@ -26,7 +26,7 @@ type combine: <T extends (Stream | Observable)[]>(...args$: T) => Stream<StreamT
 ## Examples
 
 ```typescript
-import { $, combine } from 'pipel'
+import { $, combine } from 'pipeljs'
 
 const stream1$ = $(1)
 const stream2$ = $('hello')
@@ -50,7 +50,7 @@ stream3$.next(true)
 ```
 
 ```typescript
-import { $, combine } from 'pipel'
+import { $, combine } from 'pipeljs'
 
 const stream1$ = $()
 const stream2$ = $()

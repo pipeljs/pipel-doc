@@ -28,7 +28,7 @@ type map = <T, R>(
 ### Synchronous Transformation
 
 ```typescript
-import { $, map } from 'pipel'
+import { $, map } from 'pipeljs'
 
 const stream$ = $()
 const mapped$ = stream$.pipe(map((value: number) => value * 2))
@@ -44,7 +44,7 @@ stream$.next(2) // Output: mapped: 4
 ### Asynchronous Transformation
 
 ```typescript
-import { $, map } from 'pipel'
+import { $, map } from 'pipeljs'
 
 const stream$ = $()
 const mapped$ = stream$.pipe(map((value: string) => Promise.resolve(`${value}-async`)))
@@ -59,7 +59,7 @@ stream$.next('a') // Output: async-mapped: a-async
 ### Error Handling
 
 ```typescript
-import { $, map } from 'pipel'
+import { $, map } from 'pipeljs'
 
 const stream$ = $()
 const mapped$ = stream$.pipe(

@@ -47,7 +47,7 @@ type executePlugin<T> = (params: {
 ### 场景 1：数据验证和转换
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 数据验证插件
 const validationPlugin = {
@@ -103,7 +103,7 @@ stream$.next('') // 空字符串
 ### 场景 2：性能监控和日志记录
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // 性能监控插件
 const performanceLoggerPlugin = {

@@ -7,7 +7,7 @@
 Stream 和 Observable 的主要区别在于 Stream 流可以主动推流，而 Observable 流只能被动的推流或者重复上一次推流。
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 const promise$ = $()
 
@@ -25,7 +25,7 @@ promise$.next(xxx) // 推送数据
 - [Stream](/cn/api/stream)可以使用 next 方法进行主动推流，所有订阅节点都能收到推送的数据
 
 ```typescript
-import { Stream } from 'pipel'
+import { Stream } from 'pipeljs'
 
 const promise$ = new Stream()
 
@@ -37,7 +37,7 @@ promise$.next('hello') // 输出 hello
 - 也可以使用 set 方法也可以进行数据的推送，和 next 方法的区别在于 set 方法推送的是基于上次数据的 immutable 数据。
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 const promise$ = $({ a: 1, b: { c: 2 } })
 const oldValue = promise$.value
 
@@ -89,7 +89,7 @@ pipel 采用 promise 的形式进行数据流的推送，通过[then](/cn/api/ob
 有两种方法可以结束流：
 
 ```typescript
-import { Stream } from 'pipel'
+import { Stream } from 'pipeljs'
 
 const promise$ = new Stream()
 

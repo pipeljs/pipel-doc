@@ -23,7 +23,7 @@ Stream 继承[Observable](/cn/api/observable)，除了 Observable 的属性和�
 
 - 示例
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
   const promise$ = $('1')
   promise$.then((value) => {
     console.log(value)
@@ -44,7 +44,7 @@ Stream 继承[Observable](/cn/api/observable)，除了 Observable 的属性和�
 - 示例
 
   ```typescript
-  import { $ } from 'pipel'
+  import { $ } from 'pipeljs'
   const promise$ = $({ a: 1, b: { c: 2 } })
 
   // 保留旧数据
@@ -77,7 +77,7 @@ Stream 继承[Observable](/cn/api/observable)，除了 Observable 的属性和�
 - 示例
 
   ```typescript
-  import { $, console } from 'pipel'
+  import { $, console } from 'pipeljs'
   const promise$ = $()
   promise$.afterComplete(() => {
     console.log('complete')
@@ -100,7 +100,7 @@ Stream 继承[Observable](/cn/api/observable)，除了 Observable 的属性和�
 - 示例
 
   ```typescript
-  import { $, console } from 'pipel'
+  import { $, console } from 'pipeljs'
 
   const promise$ = $('1')
   promise$.then((value) => {
@@ -127,7 +127,7 @@ Stream 继承[Observable](/cn/api/observable)，除了 Observable 的属性和�
 - 示例
 
   ```typescript
-  import { $, console } from 'pipel'
+  import { $, console } from 'pipeljs'
 
   const promise$ = $('1')
   promise$.then((value) => {

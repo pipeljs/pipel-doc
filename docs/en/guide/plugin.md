@@ -9,7 +9,7 @@ pipel supports four types of plugins: then, thenAll, execute, and executeAll.
 Triggered when creating a subscription node, receives the unsubscribe function and the current observer instance as parameters.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // Custom then plugin, unsubscribes the node after 1s
 const thenPlugin = {
@@ -34,7 +34,7 @@ promise$.next(3) // No output
 Triggered when all nodes in the stream create subscriptions, can only be used on Stream; using on Observable nodes will throw an error.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // Custom thenAll plugin, adds unified handling to all then operations in the stream
 const thenAllPlugin = {
@@ -78,7 +78,7 @@ promise$.next(2)
 Triggered when a node executes, can modify the execution result. If a node has multiple execute plugins, they are executed in plugin order, with the result of the previous plugin passed as input to the next, and the final result returned as the current node's value.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // Custom execute plugin, modifies the result when executing the node
 const executePlugin = {
@@ -104,7 +104,7 @@ Triggered when a node executes, can modify the execution result. Can only be use
 If a node has multiple executeAll plugins, they are executed in plugin order, with the result of the previous plugin passed as input to the next, and the final result returned as the current node's value.
 
 ```typescript
-import { $ } from 'pipel'
+import { $ } from 'pipeljs'
 
 // Custom executeAll plugin, adds unified handling to the root stream and all its child nodes' execute operations
 const executeAllPlugin = {

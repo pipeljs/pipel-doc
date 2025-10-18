@@ -19,7 +19,7 @@ type delay = <T>(delayTime: number) => (observable$: Observable<T>) => Observabl
 ## 示例
 
 ```typescript
-import { $, delay } from 'pipel'
+import { $, delay } from 'pipeljs'
 
 const stream$ = $(1)
 

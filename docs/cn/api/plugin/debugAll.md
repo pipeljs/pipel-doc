@@ -47,8 +47,8 @@ debugAll: (condition?: (value: any) => boolean, conditionError?: (value: any) =>
 ### 场景 1：基础调试
 
 ```typescript
-import { $ } from 'pipel'
-import { debugAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { debugAll } from 'pipeljs'
 
 const stream$ = $().use(debugAll())
 
@@ -65,8 +65,8 @@ stream$.next(promise)
 ### 场景 2：流链调试
 
 ```typescript
-import { $ } from 'pipel'
-import { debugAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { debugAll } from 'pipeljs'
 
 const promise$ = $().use(debugAll())
 
@@ -82,8 +82,8 @@ promise$.next(1)
 ### 场景 3：条件调试
 
 ```typescript
-import { $ } from 'pipel'
-import { debugAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { debugAll } from 'pipeljs'
 
 // 只对字符串类型触发调试器
 const conditionFn = (value) => typeof value === 'string'
@@ -98,8 +98,8 @@ stream$.next(42) // 不触发调试器（但仍会处理数据）
 ### 场景 4：移除插件
 
 ```typescript
-import { $ } from 'pipel'
-import { debugAll } from 'pipel'
+import { $ } from 'pipeljs'
+import { debugAll } from 'pipeljs'
 
 const plugin = debugAll()
 const stream$ = $().use(plugin)

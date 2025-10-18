@@ -30,7 +30,7 @@ type skipFilter = (filter: (time: number) => boolean) => (observable$: Observabl
 ### Scenario 1: Skip odd-numbered emissions
 
 ```typescript
-import { $, skipFilter } from 'pipel'
+import { $, skipFilter } from 'pipeljs'
 
 const stream$ = $()
 
@@ -51,7 +51,7 @@ stream$.next('fourth') // 4th time, output: Filtered value: fourth
 ### Scenario 2: Skip first N emissions
 
 ```typescript
-import { $, skipFilter } from 'pipel'
+import { $, skipFilter } from 'pipeljs'
 
 const stream$ = $()
 
@@ -72,7 +72,7 @@ stream$.next('fifth') // 5th time, output: After skipping first 3: fifth
 ### Scenario 3: Emit every Nth time
 
 ```typescript
-import { $, skipFilter } from 'pipel'
+import { $, skipFilter } from 'pipeljs'
 
 const stream$ = $()
 

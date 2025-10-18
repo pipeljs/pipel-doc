@@ -50,8 +50,8 @@ thenPlugin: <T>(
 ### 场景 1：节点完成后的处理
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 const completionPlugin = () => ({
   execute: ({ result }: any) => {
@@ -87,8 +87,8 @@ stream$.next(5)
 ### 场景 2：特定节点的后处理
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 const validationPlugin = () => ({
   execute: ({ result }: any) => {
@@ -132,8 +132,8 @@ stream$.next(-2)
 ### 场景 3：异步操作完成后的处理
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 const notificationPlugin = () => ({
   execute: ({ result }: any) => {
@@ -171,8 +171,8 @@ stream$.next(10)
 ### 场景 4：错误处理和恢复
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 const errorHandlerPlugin = () => ({
   execute: ({ result, status }: any) => {
@@ -223,8 +223,8 @@ stream$.next(-3)
 ### 场景 5：性能监控
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 const performancePlugin = (operationName: string) => {
   const startTime = Date.now()
@@ -269,8 +269,8 @@ stream$.next([1, 2, 3, 4, 5])
 ### 场景 6：条件执行插件
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 const conditionalPlugin = (condition: (result: any) => boolean, message: string) => ({
   execute: ({ result }: any) => {
@@ -305,8 +305,8 @@ stream$.next(4)
 ### 场景 7：数据转换和格式化
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 const formatPlugin = () => ({
   execute: ({ result }: any) => {
@@ -350,8 +350,8 @@ stream$.next(42)
 ### 场景 8：插件状态管理
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 class StatefulPlugin {
   private history: any[] = []
@@ -400,8 +400,8 @@ console.log('统计信息:', statefulPlugin.getStats())
 ### 场景 9：移除插件
 
 ```typescript
-import { $ } from 'pipel'
-import { thenPlugin } from 'pipel'
+import { $ } from 'pipeljs'
+import { thenPlugin } from 'pipeljs'
 
 const plugin1 = () => ({
   execute: ({ result }: any) => {
